@@ -16,6 +16,8 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Square campo;
+    private Person pepe;
+    
    
 
     /**
@@ -64,6 +66,14 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
         
+        pepe = new Person();
+        pepe.changeColor("blue");
+        pepe.moveHorizontal(-200);
+        pepe.moveVertical(20);
+        pepe.makeVisible();
+        
+        
+        
          
         
        
@@ -105,12 +115,14 @@ public class Picture
     {
         if (sun != null)   // only if it's painted already...
         {
+            pepe.slowMoveHorizontal(75);
             sun.slowMoveVertical(120);
             wall.changeColor("black");
             window.changeColor("white");
             roof.changeColor("black");
             sun.changeColor("black");
             campo.changeColor("black");
+            pepe.changeColor("black");
         }
     }
 }
