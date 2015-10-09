@@ -6,7 +6,7 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
+ * @author  Michael Kï¿½lling and David J. Barnes
  * @version 2011.07.31
  */
 public class Picture
@@ -15,7 +15,8 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
-    private Circle sun2;
+    private Square campo;
+   
 
     /**
      * Constructor for objects of class Picture
@@ -49,19 +50,25 @@ public class Picture
         roof.moveVertical(-60);
         roof.makeVisible();
 
+        campo = new Square();
+        campo.changeColor("green");
+        campo.moveHorizontal(-350);
+        campo.moveVertical(130);
+        campo.changeSize(1500);
+        campo.makeVisible();
+        
         sun = new Circle();
-        sun.changeColor("blue");
+        sun.changeColor("yellow");
         sun.moveHorizontal(100);
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
+        sun.slowMoveVertical(120);
+         
         
-        sun = new Circle();
-        sun.changeColor("green");
-        sun.moveHorizontal(-200);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();
+       
+        
+        
     }
 
     /**
