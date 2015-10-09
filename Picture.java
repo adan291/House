@@ -63,7 +63,7 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
-        sun.slowMoveVertical(120);
+        
          
         
        
@@ -96,6 +96,16 @@ public class Picture
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+        }
+    }
+    /**
+     * Change this picture to use moveSun display
+     */
+    public void moveSun()
+    {
+        if (sun != null)   // only if it's painted already...
+        {
+            sun.slowMoveVertical(120);
         }
     }
 }
