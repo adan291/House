@@ -74,26 +74,25 @@ public class Picture
         pepe.changeColor("blue");
         pepe.moveHorizontal(-200);
         pepe.moveVertical(20);
-        pepe.makeVisible();
+        
         
         ojo1 = new Circle();
         ojo1.changeColor("blue");
         ojo1.moveHorizontal(-220);
-        ojo1.moveVertical(0);
+        ojo1.moveVertical(-30);
         ojo1.changeSize(30);
         
         ojo2 = new Circle();
         ojo2.changeColor("green");
         ojo2.moveHorizontal(-160);
-        ojo2.moveVertical(0);
+        ojo2.moveVertical(-30);
         ojo2.changeSize(30);
         
         boca = new Square();
         boca.changeColor("magenta");
         boca.changeSize(20);
         boca.moveHorizontal(-265);
-        boca.moveVertical(30);
-        
+        boca.moveVertical(0);
          
         
        
@@ -126,6 +125,10 @@ public class Picture
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+            ojo2.changeColor("blue");
+            ojo2.changeColor("green");
+            boca.changeColor("magenta");
+            campo.changeColor("green");
         }
     }
     /**
@@ -135,6 +138,7 @@ public class Picture
     {
         if (sun != null)   // only if it's painted already...
         {
+            pepe.makeVisible();
             pepe.slowMoveHorizontal(1);
             sun.slowMoveVertical(2);
             pepe.slowMoveHorizontal(1);
@@ -297,21 +301,43 @@ public class Picture
         }
     }
     /**
-     * Change this picture to use funny display
+     * Change this picture to use crearcara display
      */
-    public void funny()
+    public void crearcara()
     {
         if (wall != null)   // only if it's painted already...
         {
             ojo1.makeVisible();
+            ojo2.changeColor("blue");
             ojo2.makeVisible();
+            ojo2.changeColor("green");
             boca.makeVisible();
-            ojo1.moveHorizontal(305);
-            ojo2.moveHorizontal(320);
-            boca.moveHorizontal(315);
-            ojo1.moveVertical(-20);
-            ojo2.moveVertical(-20);
-            boca.moveVertical(-30);
+            boca.changeColor("magenta");
+       
+        
+        }
+    }
+    /**
+     * Change this picture to use funny display
+     */
+    public void funny()
+    {
+        if (wall!= null)   // only if it's painted already...
+        {
+            
+            ojo1.slowMoveHorizontal(310);
+            
+            ojo2.slowMoveHorizontal(320);
+           
+            boca.slowMoveHorizontal(315);
+            
+            pepe.makeVisible();
+            pepe.moveHorizontal(-100);
+            pepe.moveVertical(20); 
+            pepe.slowMoveHorizontal(100);
+            
+            
+            
             
             
             
